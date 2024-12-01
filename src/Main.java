@@ -1,17 +1,79 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+interface Character {
+    void attack();
+    void defense();
+    void getBounty();
+    void useAccessory(Accessory accessory);
+}
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+class Luffy implements Character {
+    private String name;
+    private long bounty;
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+    public Luffy(String name, long bounty) {
+        this.name = name;
+        this.bounty = bounty;
+    }
+
+    public void attack() {
+        System.out.println(name + " attacks with Gum-Gum Pistol!" );
+    }
+
+    public void defense() {
+        System.out.println(name +  " defends with Observation Haki!");
+    }
+
+    public void getBounty() {
+        System.out.println(name + "'s bounty is " + bounty + " berries");
+    }
+
+    public void useAccessory(Accessory accessory) {
+        System.out.print(name + " is using: ");
+        accessory.useThis();
+    }
+
+}
+
+class Zoro implements Character {
+    private String name;
+    private long bounty;
+
+    public Zoro(String name, int bounty) {
+        this.name = name;
+    }
+
+    public void attack() {
+        System.out.println(name + "attacks with Three-Sword Style!" );
+    }
+
+    public void defense() {
+        System.out.println(name +  " blocks with his swords!");
+    }
+
+    public void getBounty() {
+        System.out.println(name + "'s bounty is " + bounty + " berries");
+    }
+
+    public void useAccessory(Accessory accessory) {
+        System.out.print(name + " is using: ");
+        accessory.useThis();
+    }
+
+}
+
+interface Accessory{
+    void useThis();
+}
+
+class TransponderSnail implements Accessory {
+    public void useThis() {
+        System.out.println("the transponder snail");
+    }
+}
+
+class Haki implements Accessory {
+    public void useThis() {
+        System.out.println("Haki to the enemies!");
     }
 }
