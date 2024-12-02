@@ -29,7 +29,7 @@ class Luffy implements Character {
     }
 
     public void useAccessory(Accessory accessory) {
-        System.out.print(name + " is using: ");
+        System.out.print(name + " is using ");
         accessory.useThis();
     }
 
@@ -56,7 +56,7 @@ class Zoro implements Character {
     }
 
     public void useAccessory(Accessory accessory) {
-        System.out.print(name + " is using: ");
+        System.out.print(name + " is using ");
         accessory.useThis();
     }
 
@@ -68,7 +68,7 @@ interface Accessory{
 
 class TransponderSnail implements Accessory {
     public void useThis() {
-        System.out.println("the transponder snail");
+        System.out.println("the transponder snail to talk to someone");
     }
 }
 

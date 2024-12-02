@@ -1,5 +1,6 @@
 public class lab05 {
     public static void main(String[] args) {
+
         Character Luffy1 = new Luffy("fakesLuffy", 30000000);
         Character zoro1 = new Zoro("realZoro", 1111000000);
 
